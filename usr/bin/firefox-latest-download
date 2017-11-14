@@ -1,0 +1,22 @@
+#!/bin/bash
+
+fireLanguage="$1"
+if [ "$(uname -m)" = "x86_64" ]; then
+  fireArchteture="x86_64"
+  fireBits="64"
+else
+  fireArchteture="i686"
+  fireBits="32"
+fi
+
+
+mkdir "$HOME/.firefox-installed" 2> /dev/null
+cd "$HOME/.firefox-installed"
+
+wget -O firefox-latest.tar.bz2 --show-progress "http://download.mozilla.org/?product=firefox-latest-ssl&os=linux$fireBits&lang=$fireLanguage"
+
+mkdir "latest" 2> /dev/null
+
+tar -C "latest" -xvjf "firefox-latest.tar.bz2"
+
+rm -f "firefox-latest.tar.bz2"

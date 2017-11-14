@@ -1,0 +1,22 @@
+#!/bin/dash
+
+if [ -e "$HOME/.firefox-installed/latest/firefox/firefox" ]; then
+    $HOME/.firefox-installed/latest/firefox/firefox $*
+else
+	notify-send "Downloading Firefox" &
+    fireLanguage="$1"
+
+    if [ "$LANGUAGE" = "en" ]; then
+      fireLanguage="en-US"
+    else
+      fireLanguage="$(echo "$LANGUAGE" | sed 's|_|-|g')"
+    fi
+
+    if [ -e "/usr/bin/xterm" ]; then
+        xterm -e firefox-latest-download "$fireLanguage"
+    else
+        deepin-terminal -e firefox-latest-download "$fireLanguage"
+    fi
+
+	$HOME/.firefox-installed/latest/firefox/firefox
+fi

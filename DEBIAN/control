@@ -1,0 +1,9 @@
+Package: firefox-latest
+Version: 1.0.0-1big2
+Depends: wget
+Architecture: all
+Maintainer: Bruno Goncalves <biglinux.com.br>
+Section: admin
+Priority: optional
+Installed-Size:272
+Description: Install the latest version of firefox and keep updated using the mozilla update system
