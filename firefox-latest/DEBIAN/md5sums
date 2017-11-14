@@ -1,0 +1,5 @@
+b177f906e02d67a24e8d9a286264b966  DEBIAN/control
+d41d8cd98f00b204e9800998ecf8427e  DEBIAN/md5sums
+1ceccc01a55dd0f0d6774ab9c2efb423  usr/share/applications/firefox-latest.desktop
+cec23b29d4fe9b2ddb24e29f5297292d  usr/bin/firefox-latest
+1bb415e8879e2eae00d5711e6a4438ed  usr/bin/firefox-latest-download
